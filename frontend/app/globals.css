@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Calm, light-first palette — warm off-white canvas, crisp white cards,
+       a single restrained emerald accent. */
+    --background: 40 30% 98.5%;
+    --foreground: 220 18% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 18% 12%;
+
+    --muted: 40 12% 95%;
+    --muted-foreground: 220 9% 46%;
+
+    --subtle: 40 18% 96.5%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 89%;
+    --ring: 158 54% 32%;
+
+    --primary: 158 54% 30%;
+    --primary-foreground: 150 40% 98%;
+
+    --primary-soft: 156 46% 95%;
+    --primary-soft-foreground: 160 60% 22%;
+
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --radius: 0.7rem;
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.18);
+  }
+
+  /* Thin, unobtrusive scrollbars */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(220 12% 84%);
+    border-radius: 9999px;
+    border: 3px solid hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(220 12% 74%);
+  }
+}
+
+@layer utilities {
+  /* Subtle dotted grid for marketing surfaces */
+  .bg-dot-grid {
+    background-image: radial-gradient(hsl(220 13% 88%) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Tabular figures for timestamps / metrics */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  .shadow-card {
+    box-shadow:
+      0 1px 2px hsl(220 20% 18% / 0.04),
+      0 1px 3px hsl(220 20% 18% / 0.04);
+  }
+
+  .shadow-soft {
+    box-shadow:
+      0 1px 2px hsl(220 20% 18% / 0.04),
+      0 8px 24px -12px hsl(220 25% 20% / 0.12);
+  }
+
+  .shadow-pop {
+    box-shadow:
+      0 2px 4px hsl(220 20% 18% / 0.05),
+      0 16px 48px -16px hsl(220 25% 20% / 0.22);
+  }
+}
