@@ -1,0 +1,63 @@
+# ---- Node / Next.js ----
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# ---- Environment / secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- Databases ----
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- Storage / media (do not commit large raw videos) ----
+backend/storage/
+storage/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+!demo-assets/**/*.md
+uploads/
+
+# ---- Build artifacts ----
+dist/
+build/
+*.log
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
